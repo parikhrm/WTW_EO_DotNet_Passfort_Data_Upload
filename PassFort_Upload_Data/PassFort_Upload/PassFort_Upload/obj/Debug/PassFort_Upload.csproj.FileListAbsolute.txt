@@ -1,0 +1,11 @@
+C:\Users\ParikhRm\OneDrive - Willis Towers Watson\Azure - EO - Projects\Dot Net Projects\TCTO_2025\PassFort_Upload_Data\PassFort_Upload\PassFort_Upload\bin\Debug\PassFort_Upload.exe.config
+C:\Users\ParikhRm\OneDrive - Willis Towers Watson\Azure - EO - Projects\Dot Net Projects\TCTO_2025\PassFort_Upload_Data\PassFort_Upload\PassFort_Upload\bin\Debug\PassFort_Upload.exe
+C:\Users\ParikhRm\OneDrive - Willis Towers Watson\Azure - EO - Projects\Dot Net Projects\TCTO_2025\PassFort_Upload_Data\PassFort_Upload\PassFort_Upload\bin\Debug\PassFort_Upload.pdb
+C:\Users\ParikhRm\OneDrive - Willis Towers Watson\Azure - EO - Projects\Dot Net Projects\TCTO_2025\PassFort_Upload_Data\PassFort_Upload\PassFort_Upload\obj\Debug\PassFort_Upload.Properties.Resources.resources
+C:\Users\ParikhRm\OneDrive - Willis Towers Watson\Azure - EO - Projects\Dot Net Projects\TCTO_2025\PassFort_Upload_Data\PassFort_Upload\PassFort_Upload\obj\Debug\PassFort_Upload.Upload_Data.resources
+C:\Users\ParikhRm\OneDrive - Willis Towers Watson\Azure - EO - Projects\Dot Net Projects\TCTO_2025\PassFort_Upload_Data\PassFort_Upload\PassFort_Upload\obj\Debug\PassFort_Upload.csproj.GenerateResource.Cache
+C:\Users\ParikhRm\OneDrive - Willis Towers Watson\Azure - EO - Projects\Dot Net Projects\TCTO_2025\PassFort_Upload_Data\PassFort_Upload\PassFort_Upload\obj\Debug\PassFort_Upload.exe
+C:\Users\ParikhRm\OneDrive - Willis Towers Watson\Azure - EO - Projects\Dot Net Projects\TCTO_2025\PassFort_Upload_Data\PassFort_Upload\PassFort_Upload\obj\Debug\PassFort_Upload.pdb
+C:\Users\parikhrm\OneDrive - Willis Towers Watson\Azure - EO - Projects\Dot Net Projects\TCTO_2025\PassFort_Upload_Data\PassFort_Upload\PassFort_Upload\obj\Debug\PassFort_Upload.csproj.AssemblyReference.cache
+C:\Users\parikhrm\OneDrive - Willis Towers Watson\Azure - EO - Projects\Dot Net Projects\TCTO_2025\PassFort_Upload_Data\PassFort_Upload\PassFort_Upload\obj\Debug\PassFort_Upload.exe.config
+C:\Users\parikhrm\OneDrive - Willis Towers Watson\Azure - EO - Projects\Dot Net Projects\TCTO_2025\PassFort_Upload_Data\PassFort_Upload\PassFort_Upload\obj\Debug\PassFort_Upload.csproj.CoreCompileInputs.cache
