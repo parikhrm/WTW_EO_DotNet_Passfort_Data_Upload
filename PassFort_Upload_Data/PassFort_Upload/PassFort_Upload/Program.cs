@@ -16,7 +16,7 @@ namespace PassFort_Upload
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Upload_Data());
+            Application.Run(new Upload_Audit_Data());
         }
     }
 }
