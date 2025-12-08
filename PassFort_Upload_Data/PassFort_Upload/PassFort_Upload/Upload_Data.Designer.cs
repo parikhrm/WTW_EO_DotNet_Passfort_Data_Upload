@@ -125,7 +125,6 @@
             this.txt_Is_Prospect = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_Is_Sanction_Only_Check = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_Relationship_Manager = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button8 = new System.Windows.Forms.Button();
             this.main_page = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -1109,19 +1108,6 @@
             this.txt_Relationship_Manager.ReadOnly = true;
             this.txt_Relationship_Manager.Width = 150;
             // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(32, 101);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(243, 66);
-            this.button8.TabIndex = 134;
-            this.button8.Text = "Click here to download the upload template.";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click_1);
-            // 
             // main_page
             // 
             this.main_page.Location = new System.Drawing.Point(32, 13);
@@ -1139,7 +1125,6 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1853, 1002);
             this.Controls.Add(this.main_page);
-            this.Controls.Add(this.button8);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
@@ -1170,7 +1155,6 @@
         private System.Windows.Forms.Button reset;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button upload_final;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.DataGridViewTextBoxColumn txt_Application_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn txt_Application_week;
         private System.Windows.Forms.DataGridViewTextBoxColumn txt_Application_first_decision_date;

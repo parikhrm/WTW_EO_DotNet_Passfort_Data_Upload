@@ -38,10 +38,11 @@ namespace PassFort_Upload
 
         public void reset_overall()
         {
-            datagridview_display_overall();
+            datagridview_display_overall_daily();
+            datagridview_display_overall_consolidated(); 
         }
 
-        public void datagridview_display_overall()
+        public void datagridview_display_overall_daily()
         {
             if (conn.State == ConnectionState.Open)
             {
@@ -57,6 +58,33 @@ namespace PassFort_Upload
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "select [Firm #],[Firm Name],Submitted,[Batch #],[Inquiry/PM],[Inquiry ID],[Type (P/O)],[Inquiry Name],[Entity ID],[Match Name],[Match Status],[Match Score],[Tracking ID],[Reporting ID],Address,City,State,Country,[Postal Code],Age,DOB,[Global Search],[Risk Priority],[Event Code(s)],[Most Recent Event Date],[PEP Type: Lvl],[PEP Rating],[Entity Address(es)],[Entity Date(s) of Birth],[AI Alert Confidence],[Inquiry Notes] from dbo.tbl_passfort_data_upload_daily_dotnet with(nolock)";
+                sda.SelectCommand = cmd;
+                sda.Fill(dt);
+                dataGridView1.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception ab)
+            {
+                MessageBox.Show("Error Generated Details : " + ab.ToString());
+            }
+        }
+
+        public void datagridview_display_overall_consolidated()
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
+            }
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter();
+                DataTable dt = new DataTable();
+                conn.ConnectionString = connectionstringtxt;
+                cmd.Connection = conn;
+                conn.Open();
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select ID,[Firm #],[Firm Name],Submitted,[Batch #],[Inquiry/PM],[Inquiry ID],[Type (P/O)],[Inquiry Name],[Entity ID],[Match Name],[Match Status],[Match Score],[Tracking ID],[Reporting ID],Address,City,State,Country,[Postal Code],Age,DOB,[Global Search],[Risk Priority],[Event Code(s)],[Most Recent Event Date],[PEP Type: Lvl],[PEP Rating],[Entity Address(es)],[Entity Date(s) of Birth],[AI Alert Confidence],[Inquiry Notes],Status from dbo.tbl_passfort_data_upload_daily_dotnet_archive with(nolock)";
                 sda.SelectCommand = cmd;
                 sda.Fill(dt);
                 dataGridView1.DataSource = dt;
@@ -252,6 +280,49 @@ namespace PassFort_Upload
             this.Visible = false;
             Main_Page obj1 = new Main_Page();
             obj1.Show();
+        }
+
+        private void Upload_Audit_Data_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (DataGridViewRow item in dataGridView2.Rows)
+                {
+                    bool isselected = Convert.ToBoolean(item.Cells["txt_CheckValue"].Value);
+                    //if ((bool)item.Cells["txtCheckValue"].Value == true)
+                    if (isselected)
+                    {
+                        if (conn.State == ConnectionState.Open)
+                        {
+                            conn.Close();
+                        }
+
+                        cmd.Parameters.Clear();
+                        conn.ConnectionString = connectionstringtxt;
+                        cmd.Connection = conn;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandText = "dbo.tbl_passfort_data_upload_daily_dotnet_audit_archive";
+                        cmd.Parameters.AddWithValue("@ID", Convert.ToInt32(item.Cells["txt_ID"].Value));
+                        cmd.Parameters.AddWithValue("@LastUpdatedBy", Environment.UserName.ToString());
+
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        cmd.Parameters.Clear();
+                        conn.Close();
+                    }
+                }
+                MessageBox.Show("Records Updated Successfully");
+                datagridview_display_overall_consolidated();
+            }
+            catch (Exception ab)
+            {
+                MessageBox.Show("Error Generated Details: " + ab.ToString());
+            }
         }
     }
 }
