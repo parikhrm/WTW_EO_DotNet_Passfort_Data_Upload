@@ -36,6 +36,38 @@ namespace PassFort_Upload
             }
         }
 
+        public void reset_overall()
+        {
+            datagridview_display_overall();
+        }
+
+        public void datagridview_display_overall()
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
+            }
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter();
+                DataTable dt = new DataTable();
+                conn.ConnectionString = connectionstringtxt;
+                cmd.Connection = conn;
+                conn.Open();
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select [Firm #],[Firm Name],Submitted,[Batch #],[Inquiry/PM],[Inquiry ID],[Type (P/O)],[Inquiry Name],[Entity ID],[Match Name],[Match Status],[Match Score],[Tracking ID],[Reporting ID],Address,City,State,Country,[Postal Code],Age,DOB,[Global Search],[Risk Priority],[Event Code(s)],[Most Recent Event Date],[PEP Type: Lvl],[PEP Rating],[Entity Address(es)],[Entity Date(s) of Birth],[AI Alert Confidence],[Inquiry Notes] from dbo.tbl_passfort_data_upload_daily_dotnet with(nolock)";
+                sda.SelectCommand = cmd;
+                sda.Fill(dt);
+                dataGridView1.DataSource = dt;
+                conn.Close();
+            }
+            catch (Exception ab)
+            {
+                MessageBox.Show("Error Generated Details : " + ab.ToString());
+            }
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(excelsheetname.Text))
@@ -116,11 +148,11 @@ namespace PassFort_Upload
                         conn.ConnectionString = connectionstringtxt;
                         cmd.Connection = conn;
 
-
-                        string pathconn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +
+                        String pathconn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +
                                         excelfilepath.Text +
-                                        ";Extended Properties=\"Excel 8.0;HDR=Yes;';";
+                                        ";Extended Properties='Excel 12.0 XML;HDR=YES;';";
 
+                        //string pathconn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + excelfilepath.Text +";Extended Properties=\"Excel 8.0;HDR=Yes;';";
                         OleDbConnection conne = new OleDbConnection(pathconn);
                         OleDbDataAdapter da = new OleDbDataAdapter("select * from [" + excelsheetname.Text + "$]", conne);
                         DataTable dt = new DataTable();
@@ -141,60 +173,60 @@ namespace PassFort_Upload
 
                         using (SqlBulkCopy sqlbulkcopy = new SqlBulkCopy(conn))
                         {
-                            sqlbulkcopy.BulkCopyTimeout = 1000;
+                            //sqlbulkcopy.BulkCopyTimeout = 1000;
                             sqlbulkcopy.DestinationTableName = "dbo.tbl_passfort_data_upload_daily_dotnet_audit";
-                            sqlbulkcopy.ColumnMappings.Add("Firm", "Firm");
-                            sqlbulkcopy.ColumnMappings.Add("Firm_Name", "Firm_Name");
+                            sqlbulkcopy.ColumnMappings.Add("Firm #", "Firm #");
+                            sqlbulkcopy.ColumnMappings.Add("Firm Name", "Firm Name");
                             sqlbulkcopy.ColumnMappings.Add("Submitted", "Submitted");
-                            sqlbulkcopy.ColumnMappings.Add("Batch", "Batch");
-                            sqlbulkcopy.ColumnMappings.Add("Inquiry_PM", "Inquiry_PM");
-                            sqlbulkcopy.ColumnMappings.Add("InquiryID", "InquiryID");
-                            sqlbulkcopy.ColumnMappings.Add("Type_P_O", "Type_P_O");
-                            sqlbulkcopy.ColumnMappings.Add("Inquiry_Name", "Inquiry_Name");
-                            sqlbulkcopy.ColumnMappings.Add("EntityID", "EntityID");
-                            sqlbulkcopy.ColumnMappings.Add("Match_Name", "Match_Name");
-                            sqlbulkcopy.ColumnMappings.Add("Match_Status", "Match_Status");
-                            sqlbulkcopy.ColumnMappings.Add("Match_Score", "Match_Score");
-                            sqlbulkcopy.ColumnMappings.Add("TrackingID", "TrackingID");
-                            sqlbulkcopy.ColumnMappings.Add("ReportingID", "ReportingID");
+                            sqlbulkcopy.ColumnMappings.Add("Batch #", "Batch #");
+                            sqlbulkcopy.ColumnMappings.Add("Inquiry/PM", "Inquiry/PM");
+                            sqlbulkcopy.ColumnMappings.Add("Inquiry ID", "Inquiry ID");
+                            sqlbulkcopy.ColumnMappings.Add("Type (P/O)", "Type (P/O)");
+                            sqlbulkcopy.ColumnMappings.Add("Inquiry Name", "Inquiry Name");
+                            sqlbulkcopy.ColumnMappings.Add("Entity ID", "Entity ID");
+                            sqlbulkcopy.ColumnMappings.Add("Match Name", "Match Name");
+                            sqlbulkcopy.ColumnMappings.Add("Match Status", "Match Status");
+                            sqlbulkcopy.ColumnMappings.Add("Match Score", "Match Score");
+                            sqlbulkcopy.ColumnMappings.Add("Tracking ID", "Tracking ID");
+                            sqlbulkcopy.ColumnMappings.Add("Reporting ID", "Reporting ID");
                             sqlbulkcopy.ColumnMappings.Add("Address", "Address");
                             sqlbulkcopy.ColumnMappings.Add("City", "City");
                             sqlbulkcopy.ColumnMappings.Add("State", "State");
                             sqlbulkcopy.ColumnMappings.Add("Country", "Country");
-                            sqlbulkcopy.ColumnMappings.Add("Postal_Code", "Postal_Code");
+                            sqlbulkcopy.ColumnMappings.Add("Postal Code", "Postal Code");
                             sqlbulkcopy.ColumnMappings.Add("Age", "Age");
                             sqlbulkcopy.ColumnMappings.Add("DOB", "DOB");
-                            sqlbulkcopy.ColumnMappings.Add("Global_Search", "Global_Search");
-                            sqlbulkcopy.ColumnMappings.Add("Risk_Priority", "Risk_Priority");
-                            sqlbulkcopy.ColumnMappings.Add("Event_Codes", "Event_Codes");
-                            sqlbulkcopy.ColumnMappings.Add("Most_Recent_Event_Date", "Most_Recent_Event_Date");
-                            sqlbulkcopy.ColumnMappings.Add("PEP_Type_Level", "PEP_Type_Level");
-                            sqlbulkcopy.ColumnMappings.Add("PEP_Rating", "PEP_Rating");
-                            sqlbulkcopy.ColumnMappings.Add("Entity_Address", "Entity_Address");
-                            sqlbulkcopy.ColumnMappings.Add("Entity_Date_Of_Birth", "Entity_Date_Of_Birth");
-                            sqlbulkcopy.ColumnMappings.Add("AI_Alert_Confidence", "AI_Alert_Confidence");
-                            sqlbulkcopy.ColumnMappings.Add("Inquiry_Notes", "Inquiry_Notes");
+                            sqlbulkcopy.ColumnMappings.Add("Global Search", "Global Search");
+                            sqlbulkcopy.ColumnMappings.Add("Risk Priority", "Risk Priority");
+                            sqlbulkcopy.ColumnMappings.Add("Event Code(s)", "Event Code(s)");
+                            sqlbulkcopy.ColumnMappings.Add("Most Recent Event Date", "Most Recent Event Date");
+                            sqlbulkcopy.ColumnMappings.Add("PEP Type: Lvl", "PEP Type: Lvl");
+                            sqlbulkcopy.ColumnMappings.Add("PEP Rating", "PEP Rating");
+                            sqlbulkcopy.ColumnMappings.Add("Entity Address(es)", "Entity Address(es)");
+                            sqlbulkcopy.ColumnMappings.Add("Entity Date(s) of Birth", "Entity Date(s) of Birth");
+                            sqlbulkcopy.ColumnMappings.Add("AI Alert Confidence", "AI Alert Confidence");
+                            sqlbulkcopy.ColumnMappings.Add("Inquiry Notes", "Inquiry Notes");
                             
                             conn.Open();
                             sqlbulkcopy.WriteToServer(dt);
                             conn.Close();
                         }
 
-                        //conn.Open();
-                        //cmd.Parameters.Clear();
-                        //cmd.CommandType = CommandType.StoredProcedure;
-                        //cmd.CommandTimeout = 1000;
-                        //cmd.CommandText = "dbo.usp_passfort_data_upload_daily_dotnet";
-                        //cmd.Parameters.AddWithValue("@UploadedBy", Environment.UserName.ToString());
-                        //cmd.Parameters.Add("@Message", SqlDbType.NVarChar, 2000);
-                        //cmd.Parameters["@Message"].Direction = ParameterDirection.Output;
-                        //cmd.ExecuteNonQuery();
-                        //conn.Close();
-                        //string uploadmessage = cmd.Parameters["@Message"].Value.ToString();
-                        //MessageBox.Show("" + uploadmessage.ToString());
-                        //reset_overall();
-                        //cmd.Parameters.Clear();
-                        //conn.Close();
+                        conn.Open();
+                        cmd.Parameters.Clear();
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandTimeout = 1000;
+                        cmd.CommandText = "dbo.usp_passfort_data_upload_daily_dotnet_audit";
+                        cmd.Parameters.AddWithValue("@UploadedBy", Environment.UserName.ToString());
+                        cmd.Parameters.Add("@Message", SqlDbType.NVarChar, 2000);
+                        cmd.Parameters["@Message"].Direction = ParameterDirection.Output;
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        string uploadmessage = cmd.Parameters["@Message"].Value.ToString();
+                        MessageBox.Show("" + uploadmessage.ToString());
+                        reset_overall();
+                        cmd.Parameters.Clear();
+                        conn.Close();
                     }
 
                     catch (Exception ab)

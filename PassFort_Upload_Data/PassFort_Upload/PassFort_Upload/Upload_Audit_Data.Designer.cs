@@ -226,8 +226,8 @@
             // 
             // txt_Firm
             // 
-            this.txt_Firm.DataPropertyName = "Firm";
-            this.txt_Firm.HeaderText = "Firm";
+            this.txt_Firm.DataPropertyName = "Firm #";
+            this.txt_Firm.HeaderText = "Firm #";
             this.txt_Firm.MinimumWidth = 8;
             this.txt_Firm.Name = "txt_Firm";
             this.txt_Firm.ReadOnly = true;
@@ -235,8 +235,8 @@
             // 
             // txt_Firm_Name
             // 
-            this.txt_Firm_Name.DataPropertyName = "Firm_Name";
-            this.txt_Firm_Name.HeaderText = "Firm_Name";
+            this.txt_Firm_Name.DataPropertyName = "Firm Name";
+            this.txt_Firm_Name.HeaderText = "Firm Name";
             this.txt_Firm_Name.MinimumWidth = 8;
             this.txt_Firm_Name.Name = "txt_Firm_Name";
             this.txt_Firm_Name.ReadOnly = true;
@@ -253,8 +253,8 @@
             // 
             // txt_Batch
             // 
-            this.txt_Batch.DataPropertyName = "Batch";
-            this.txt_Batch.HeaderText = "Batch";
+            this.txt_Batch.DataPropertyName = "Batch #";
+            this.txt_Batch.HeaderText = "Batch #";
             this.txt_Batch.MinimumWidth = 8;
             this.txt_Batch.Name = "txt_Batch";
             this.txt_Batch.ReadOnly = true;
@@ -262,8 +262,8 @@
             // 
             // txt_Inquiry_PM
             // 
-            this.txt_Inquiry_PM.DataPropertyName = "Inquiry_PM";
-            this.txt_Inquiry_PM.HeaderText = "Inquiry_PM";
+            this.txt_Inquiry_PM.DataPropertyName = "Inquiry/PM";
+            this.txt_Inquiry_PM.HeaderText = "Inquiry/PM";
             this.txt_Inquiry_PM.MinimumWidth = 8;
             this.txt_Inquiry_PM.Name = "txt_Inquiry_PM";
             this.txt_Inquiry_PM.ReadOnly = true;
@@ -271,8 +271,8 @@
             // 
             // txt_InquiryID
             // 
-            this.txt_InquiryID.DataPropertyName = "InquiryID";
-            this.txt_InquiryID.HeaderText = "InquiryID";
+            this.txt_InquiryID.DataPropertyName = "Inquiry ID";
+            this.txt_InquiryID.HeaderText = "Inquiry ID";
             this.txt_InquiryID.MinimumWidth = 8;
             this.txt_InquiryID.Name = "txt_InquiryID";
             this.txt_InquiryID.ReadOnly = true;
@@ -280,8 +280,8 @@
             // 
             // txt_Type_P_O
             // 
-            this.txt_Type_P_O.DataPropertyName = "Type_P_O";
-            this.txt_Type_P_O.HeaderText = "Type_P_O";
+            this.txt_Type_P_O.DataPropertyName = "Type (P/O)";
+            this.txt_Type_P_O.HeaderText = "Type (P/O)";
             this.txt_Type_P_O.MinimumWidth = 8;
             this.txt_Type_P_O.Name = "txt_Type_P_O";
             this.txt_Type_P_O.ReadOnly = true;
@@ -289,8 +289,8 @@
             // 
             // txt_Inquiry_Name
             // 
-            this.txt_Inquiry_Name.DataPropertyName = "Inquiry_Name";
-            this.txt_Inquiry_Name.HeaderText = "Inquiry_Name";
+            this.txt_Inquiry_Name.DataPropertyName = "Inquiry Name";
+            this.txt_Inquiry_Name.HeaderText = "Inquiry Name";
             this.txt_Inquiry_Name.MinimumWidth = 8;
             this.txt_Inquiry_Name.Name = "txt_Inquiry_Name";
             this.txt_Inquiry_Name.ReadOnly = true;
@@ -298,8 +298,8 @@
             // 
             // txt_EntityID
             // 
-            this.txt_EntityID.DataPropertyName = "EntityID";
-            this.txt_EntityID.HeaderText = "EntityID";
+            this.txt_EntityID.DataPropertyName = "Entity ID";
+            this.txt_EntityID.HeaderText = "Entity ID";
             this.txt_EntityID.MinimumWidth = 8;
             this.txt_EntityID.Name = "txt_EntityID";
             this.txt_EntityID.ReadOnly = true;
@@ -307,8 +307,8 @@
             // 
             // txt_Match_Name
             // 
-            this.txt_Match_Name.DataPropertyName = "Match_Name";
-            this.txt_Match_Name.HeaderText = "Match_Name";
+            this.txt_Match_Name.DataPropertyName = "Match Name";
+            this.txt_Match_Name.HeaderText = "Match Name";
             this.txt_Match_Name.MinimumWidth = 8;
             this.txt_Match_Name.Name = "txt_Match_Name";
             this.txt_Match_Name.ReadOnly = true;
@@ -316,7 +316,7 @@
             // 
             // txt_Match_Status
             // 
-            this.txt_Match_Status.DataPropertyName = "Match_Status";
+            this.txt_Match_Status.DataPropertyName = "Match Status";
             this.txt_Match_Status.HeaderText = "Match_Status";
             this.txt_Match_Status.MinimumWidth = 8;
             this.txt_Match_Status.Name = "txt_Match_Status";
@@ -325,8 +325,8 @@
             // 
             // txt_Match_Score
             // 
-            this.txt_Match_Score.DataPropertyName = "Match_Score";
-            this.txt_Match_Score.HeaderText = "Match_Score";
+            this.txt_Match_Score.DataPropertyName = "Match Score";
+            this.txt_Match_Score.HeaderText = "Match Score";
             this.txt_Match_Score.MinimumWidth = 8;
             this.txt_Match_Score.Name = "txt_Match_Score";
             this.txt_Match_Score.ReadOnly = true;
@@ -334,8 +334,8 @@
             // 
             // txt_TrackingID
             // 
-            this.txt_TrackingID.DataPropertyName = "TrackingID";
-            this.txt_TrackingID.HeaderText = "TrackingID";
+            this.txt_TrackingID.DataPropertyName = "Tracking ID";
+            this.txt_TrackingID.HeaderText = "Tracking ID";
             this.txt_TrackingID.MinimumWidth = 8;
             this.txt_TrackingID.Name = "txt_TrackingID";
             this.txt_TrackingID.ReadOnly = true;
@@ -343,8 +343,8 @@
             // 
             // txt_ReportingID
             // 
-            this.txt_ReportingID.DataPropertyName = "ReportingID";
-            this.txt_ReportingID.HeaderText = "ReportingID";
+            this.txt_ReportingID.DataPropertyName = "Reporting ID";
+            this.txt_ReportingID.HeaderText = "Reporting ID";
             this.txt_ReportingID.MinimumWidth = 8;
             this.txt_ReportingID.Name = "txt_ReportingID";
             this.txt_ReportingID.ReadOnly = true;
@@ -388,8 +388,8 @@
             // 
             // txt_Postal_Code
             // 
-            this.txt_Postal_Code.DataPropertyName = "Postal_Code";
-            this.txt_Postal_Code.HeaderText = "Postal_Code";
+            this.txt_Postal_Code.DataPropertyName = "Postal Code";
+            this.txt_Postal_Code.HeaderText = "Postal Code";
             this.txt_Postal_Code.MinimumWidth = 8;
             this.txt_Postal_Code.Name = "txt_Postal_Code";
             this.txt_Postal_Code.ReadOnly = true;
@@ -415,8 +415,8 @@
             // 
             // txt_Global_Search
             // 
-            this.txt_Global_Search.DataPropertyName = "Global_Search";
-            this.txt_Global_Search.HeaderText = "Global_Search";
+            this.txt_Global_Search.DataPropertyName = "Global Search";
+            this.txt_Global_Search.HeaderText = "Global Search";
             this.txt_Global_Search.MinimumWidth = 8;
             this.txt_Global_Search.Name = "txt_Global_Search";
             this.txt_Global_Search.ReadOnly = true;
@@ -424,8 +424,8 @@
             // 
             // txt_Risk_Priority
             // 
-            this.txt_Risk_Priority.DataPropertyName = "Risk_Priority";
-            this.txt_Risk_Priority.HeaderText = "Risk_Priority";
+            this.txt_Risk_Priority.DataPropertyName = "Risk Priority";
+            this.txt_Risk_Priority.HeaderText = "Risk Priority";
             this.txt_Risk_Priority.MinimumWidth = 8;
             this.txt_Risk_Priority.Name = "txt_Risk_Priority";
             this.txt_Risk_Priority.ReadOnly = true;
@@ -433,8 +433,8 @@
             // 
             // txt_Event_Codes
             // 
-            this.txt_Event_Codes.DataPropertyName = "Event_Codes";
-            this.txt_Event_Codes.HeaderText = "Event_Codes";
+            this.txt_Event_Codes.DataPropertyName = "Event Code(s)";
+            this.txt_Event_Codes.HeaderText = "Event Code(s)";
             this.txt_Event_Codes.MinimumWidth = 8;
             this.txt_Event_Codes.Name = "txt_Event_Codes";
             this.txt_Event_Codes.ReadOnly = true;
@@ -442,8 +442,8 @@
             // 
             // txt_Most_Recent_Event_Date
             // 
-            this.txt_Most_Recent_Event_Date.DataPropertyName = "Most_Recent_Event_Date";
-            this.txt_Most_Recent_Event_Date.HeaderText = "Most_Recent_Event_Date";
+            this.txt_Most_Recent_Event_Date.DataPropertyName = "Most Recent Event Date";
+            this.txt_Most_Recent_Event_Date.HeaderText = "Most Recent Event Date";
             this.txt_Most_Recent_Event_Date.MinimumWidth = 8;
             this.txt_Most_Recent_Event_Date.Name = "txt_Most_Recent_Event_Date";
             this.txt_Most_Recent_Event_Date.ReadOnly = true;
@@ -451,8 +451,8 @@
             // 
             // txt_PEP_Type_Level
             // 
-            this.txt_PEP_Type_Level.DataPropertyName = "PEP_Type_Level";
-            this.txt_PEP_Type_Level.HeaderText = "PEP_Type_Level";
+            this.txt_PEP_Type_Level.DataPropertyName = "PEP Type: Lvl";
+            this.txt_PEP_Type_Level.HeaderText = "PEP Type: Lvl";
             this.txt_PEP_Type_Level.MinimumWidth = 8;
             this.txt_PEP_Type_Level.Name = "txt_PEP_Type_Level";
             this.txt_PEP_Type_Level.ReadOnly = true;
@@ -460,8 +460,8 @@
             // 
             // txt_PEP_Rating
             // 
-            this.txt_PEP_Rating.DataPropertyName = "PEP_Rating";
-            this.txt_PEP_Rating.HeaderText = "PEP_Rating";
+            this.txt_PEP_Rating.DataPropertyName = "PEP Rating";
+            this.txt_PEP_Rating.HeaderText = "PEP Rating";
             this.txt_PEP_Rating.MinimumWidth = 8;
             this.txt_PEP_Rating.Name = "txt_PEP_Rating";
             this.txt_PEP_Rating.ReadOnly = true;
@@ -469,8 +469,8 @@
             // 
             // txt_Entity_Address
             // 
-            this.txt_Entity_Address.DataPropertyName = "Entity_Address";
-            this.txt_Entity_Address.HeaderText = "Entity_Address";
+            this.txt_Entity_Address.DataPropertyName = "Entity Address(es)";
+            this.txt_Entity_Address.HeaderText = "Entity Address(es)";
             this.txt_Entity_Address.MinimumWidth = 8;
             this.txt_Entity_Address.Name = "txt_Entity_Address";
             this.txt_Entity_Address.ReadOnly = true;
@@ -478,8 +478,8 @@
             // 
             // txt_Entity_Date_Of_Birth
             // 
-            this.txt_Entity_Date_Of_Birth.DataPropertyName = "Entity_Date_Of_Birth";
-            this.txt_Entity_Date_Of_Birth.HeaderText = "Entity_Date_Of_Birth";
+            this.txt_Entity_Date_Of_Birth.DataPropertyName = "Entity Date(s) of Birth";
+            this.txt_Entity_Date_Of_Birth.HeaderText = "Entity Date(s) of Birth";
             this.txt_Entity_Date_Of_Birth.MinimumWidth = 8;
             this.txt_Entity_Date_Of_Birth.Name = "txt_Entity_Date_Of_Birth";
             this.txt_Entity_Date_Of_Birth.ReadOnly = true;
@@ -487,8 +487,8 @@
             // 
             // txt_AI_Alert_Confidence
             // 
-            this.txt_AI_Alert_Confidence.DataPropertyName = "AI_Alert_Confidence";
-            this.txt_AI_Alert_Confidence.HeaderText = "AI_Alert_Confidence";
+            this.txt_AI_Alert_Confidence.DataPropertyName = "AI Alert Confidence";
+            this.txt_AI_Alert_Confidence.HeaderText = "AI Alert Confidence";
             this.txt_AI_Alert_Confidence.MinimumWidth = 8;
             this.txt_AI_Alert_Confidence.Name = "txt_AI_Alert_Confidence";
             this.txt_AI_Alert_Confidence.ReadOnly = true;
@@ -496,8 +496,8 @@
             // 
             // txt_Inquiry_Notes
             // 
-            this.txt_Inquiry_Notes.DataPropertyName = "Inquiry_Notes";
-            this.txt_Inquiry_Notes.HeaderText = "Inquiry_Notes";
+            this.txt_Inquiry_Notes.DataPropertyName = "Inquiry Notes";
+            this.txt_Inquiry_Notes.HeaderText = "Inquiry Notes";
             this.txt_Inquiry_Notes.MinimumWidth = 8;
             this.txt_Inquiry_Notes.Name = "txt_Inquiry_Notes";
             this.txt_Inquiry_Notes.ReadOnly = true;
@@ -508,7 +508,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1837, 1145);
+            this.ClientSize = new System.Drawing.Size(1837, 1050);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.groupBox1);
