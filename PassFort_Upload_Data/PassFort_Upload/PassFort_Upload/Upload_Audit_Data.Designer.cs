@@ -70,6 +70,7 @@
             this.txt_Entity_Date_Of_Birth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_AI_Alert_Confidence = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_Inquiry_Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.main_page = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -503,12 +504,23 @@
             this.txt_Inquiry_Notes.ReadOnly = true;
             this.txt_Inquiry_Notes.Width = 150;
             // 
+            // main_page
+            // 
+            this.main_page.Location = new System.Drawing.Point(26, 14);
+            this.main_page.Name = "main_page";
+            this.main_page.Size = new System.Drawing.Size(96, 45);
+            this.main_page.TabIndex = 137;
+            this.main_page.Text = "Main Page";
+            this.main_page.UseVisualStyleBackColor = true;
+            this.main_page.Click += new System.EventHandler(this.main_page_Click);
+            // 
             // Upload_Audit_Data
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1837, 1050);
+            this.Controls.Add(this.main_page);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.groupBox1);
@@ -571,5 +583,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txt_Entity_Date_Of_Birth;
         private System.Windows.Forms.DataGridViewTextBoxColumn txt_AI_Alert_Confidence;
         private System.Windows.Forms.DataGridViewTextBoxColumn txt_Inquiry_Notes;
+        private System.Windows.Forms.Button main_page;
     }
 }

@@ -246,5 +246,12 @@ namespace PassFort_Upload
                 }
             }
         }
+
+        private void main_page_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Main_Page obj1 = new Main_Page();
+            obj1.Show();
+        }
     }
 }

@@ -331,6 +331,13 @@ namespace PassFort_Upload
                 MessageBox.Show("Unable to open link that was clicked. Following are the error generated details" + ab.ToString());
             }
         }
+
+        private void main_page_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Main_Page obj1 = new Main_Page();
+            obj1.Show();
+        }
     }
     
 }
