@@ -309,6 +309,7 @@ namespace PassFort_Upload
                         cmd.CommandText = "dbo.tbl_passfort_data_upload_daily_dotnet_audit_archive";
                         cmd.Parameters.AddWithValue("@ID", Convert.ToInt32(item.Cells["txt_ID"].Value));
                         cmd.Parameters.AddWithValue("@LastUpdatedBy", Environment.UserName.ToString());
+                        cmd.Parameters.AddWithValue("@Status",status.Text);
 
                         conn.Open();
                         cmd.ExecuteNonQuery();
