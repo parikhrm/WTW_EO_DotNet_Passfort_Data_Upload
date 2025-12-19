@@ -1,12 +1,85 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\parikhrm\\source\\repos\\WTW_EO_DotNet_Passfort_Data_Upload\\PassFort_Upload_Data\\PassFort_Upload\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3F023C82-2994-422C-870C-5CD0950C3711}|PassFort_Upload\\PassFort_Upload.csproj|C:\\Users\\parikhrm\\source\\repos\\WTW_EO_DotNet_Passfort_Data_Upload\\PassFort_Upload_Data\\PassFort_Upload\\passfort_upload\\main_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F023C82-2994-422C-870C-5CD0950C3711}|PassFort_Upload\\PassFort_Upload.csproj|solutionrelative:passfort_upload\\main_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F023C82-2994-422C-870C-5CD0950C3711}|PassFort_Upload\\PassFort_Upload.csproj|c:\\users\\parikhrm\\source\\repos\\wtw_eo_dotnet_passfort_data_upload\\passfort_upload_data\\passfort_upload\\passfort_upload\\workflow_pf_audit_data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F023C82-2994-422C-870C-5CD0950C3711}|PassFort_Upload\\PassFort_Upload.csproj|solutionrelative:passfort_upload\\workflow_pf_audit_data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F023C82-2994-422C-870C-5CD0950C3711}|PassFort_Upload\\PassFort_Upload.csproj|C:\\Users\\parikhrm\\source\\repos\\WTW_EO_DotNet_Passfort_Data_Upload\\PassFort_Upload_Data\\PassFort_Upload\\passfort_upload\\workflow_pf_audit_data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F023C82-2994-422C-870C-5CD0950C3711}|PassFort_Upload\\PassFort_Upload.csproj|solutionrelative:passfort_upload\\workflow_pf_audit_data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F023C82-2994-422C-870C-5CD0950C3711}|PassFort_Upload\\PassFort_Upload.csproj|C:\\Users\\parikhrm\\source\\repos\\WTW_EO_DotNet_Passfort_Data_Upload\\PassFort_Upload_Data\\PassFort_Upload\\passfort_upload\\upload_audit_data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3F023C82-2994-422C-870C-5CD0950C3711}|PassFort_Upload\\PassFort_Upload.csproj|solutionrelative:passfort_upload\\upload_audit_data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Workflow_PF_Audit_Data.cs",
+              "DocumentMoniker": "C:\\Users\\parikhrm\\source\\repos\\WTW_EO_DotNet_Passfort_Data_Upload\\PassFort_Upload_Data\\PassFort_Upload\\PassFort_Upload\\Workflow_PF_Audit_Data.cs",
+              "RelativeDocumentMoniker": "PassFort_Upload\\Workflow_PF_Audit_Data.cs",
+              "ToolTip": "C:\\Users\\parikhrm\\source\\repos\\WTW_EO_DotNet_Passfort_Data_Upload\\PassFort_Upload_Data\\PassFort_Upload\\PassFort_Upload\\Workflow_PF_Audit_Data.cs",
+              "RelativeToolTip": "PassFort_Upload\\Workflow_PF_Audit_Data.cs",
+              "ViewState": "AgIAAHgBAAAAAAAAAAAAAIcBAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T08:41:45.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Workflow_PF_Audit_Data.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\parikhrm\\source\\repos\\WTW_EO_DotNet_Passfort_Data_Upload\\PassFort_Upload_Data\\PassFort_Upload\\PassFort_Upload\\Workflow_PF_Audit_Data.cs",
+              "RelativeDocumentMoniker": "PassFort_Upload\\Workflow_PF_Audit_Data.cs",
+              "ToolTip": "C:\\Users\\parikhrm\\source\\repos\\WTW_EO_DotNet_Passfort_Data_Upload\\PassFort_Upload_Data\\PassFort_Upload\\PassFort_Upload\\Workflow_PF_Audit_Data.cs [Design]",
+              "RelativeToolTip": "PassFort_Upload\\Workflow_PF_Audit_Data.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T08:40:57.537Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Upload_Audit_Data.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\parikhrm\\source\\repos\\WTW_EO_DotNet_Passfort_Data_Upload\\PassFort_Upload_Data\\PassFort_Upload\\PassFort_Upload\\Upload_Audit_Data.cs",
+              "RelativeDocumentMoniker": "PassFort_Upload\\Upload_Audit_Data.cs",
+              "ToolTip": "C:\\Users\\parikhrm\\source\\repos\\WTW_EO_DotNet_Passfort_Data_Upload\\PassFort_Upload_Data\\PassFort_Upload\\PassFort_Upload\\Upload_Audit_Data.cs [Design]",
+              "RelativeToolTip": "PassFort_Upload\\Upload_Audit_Data.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T08:39:23.731Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main_Page.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\parikhrm\\source\\repos\\WTW_EO_DotNet_Passfort_Data_Upload\\PassFort_Upload_Data\\PassFort_Upload\\PassFort_Upload\\Main_Page.cs",
+              "RelativeDocumentMoniker": "PassFort_Upload\\Main_Page.cs",
+              "ToolTip": "C:\\Users\\parikhrm\\source\\repos\\WTW_EO_DotNet_Passfort_Data_Upload\\PassFort_Upload_Data\\PassFort_Upload\\PassFort_Upload\\Main_Page.cs [Design]",
+              "RelativeToolTip": "PassFort_Upload\\Main_Page.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T08:39:04.635Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

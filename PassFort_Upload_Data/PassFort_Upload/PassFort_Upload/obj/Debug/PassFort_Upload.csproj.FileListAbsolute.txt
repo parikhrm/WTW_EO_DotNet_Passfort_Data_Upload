@@ -22,3 +22,4 @@ C:\Users\parikhrm\source\repos\WTW_EO_DotNet_Passfort_Data_Upload\PassFort_Uploa
 C:\Users\parikhrm\source\repos\WTW_EO_DotNet_Passfort_Data_Upload\PassFort_Upload_Data\PassFort_Upload\PassFort_Upload\obj\Debug\PassFort_Upload.exe
 C:\Users\parikhrm\source\repos\WTW_EO_DotNet_Passfort_Data_Upload\PassFort_Upload_Data\PassFort_Upload\PassFort_Upload\obj\Debug\PassFort_Upload.pdb
 C:\Users\parikhrm\source\repos\WTW_EO_DotNet_Passfort_Data_Upload\PassFort_Upload_Data\PassFort_Upload\PassFort_Upload\obj\Debug\PassFort_Upload.Main_Page.resources
+C:\Users\parikhrm\source\repos\WTW_EO_DotNet_Passfort_Data_Upload\PassFort_Upload_Data\PassFort_Upload\PassFort_Upload\obj\Debug\PassFort_Upload.Workflow_PF_Audit_Data.resources

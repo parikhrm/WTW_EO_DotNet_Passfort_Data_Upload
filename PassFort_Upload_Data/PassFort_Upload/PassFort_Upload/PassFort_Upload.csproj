@@ -64,6 +64,12 @@
     <Compile Include="Upload_Data.Designer.cs">
       <DependentUpon>Upload_Data.cs</DependentUpon>
     </Compile>
+    <Compile Include="Workflow_PF_Audit_Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Workflow_PF_Audit_Data.Designer.cs">
+      <DependentUpon>Workflow_PF_Audit_Data.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Main_Page.resx">
       <DependentUpon>Main_Page.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Upload_Data.resx">
       <DependentUpon>Upload_Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow_PF_Audit_Data.resx">
+      <DependentUpon>Workflow_PF_Audit_Data.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

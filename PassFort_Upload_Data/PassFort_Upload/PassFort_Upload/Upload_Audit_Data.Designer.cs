@@ -38,7 +38,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.reset = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.main_page = new System.Windows.Forms.Button();
             this.txt_Firm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_Firm_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_Submitted = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +69,7 @@
             this.txt_Entity_Date_Of_Birth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_AI_Alert_Confidence = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_Inquiry_Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.main_page = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -211,16 +211,6 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1732, 707);
             this.dataGridView1.TabIndex = 136;
-            // 
-            // main_page
-            // 
-            this.main_page.Location = new System.Drawing.Point(26, 14);
-            this.main_page.Name = "main_page";
-            this.main_page.Size = new System.Drawing.Size(96, 45);
-            this.main_page.TabIndex = 137;
-            this.main_page.Text = "Main Page";
-            this.main_page.UseVisualStyleBackColor = true;
-            this.main_page.Click += new System.EventHandler(this.main_page_Click);
             // 
             // txt_Firm
             // 
@@ -500,6 +490,16 @@
             this.txt_Inquiry_Notes.Name = "txt_Inquiry_Notes";
             this.txt_Inquiry_Notes.ReadOnly = true;
             this.txt_Inquiry_Notes.Width = 150;
+            // 
+            // main_page
+            // 
+            this.main_page.Location = new System.Drawing.Point(26, 14);
+            this.main_page.Name = "main_page";
+            this.main_page.Size = new System.Drawing.Size(120, 45);
+            this.main_page.TabIndex = 137;
+            this.main_page.Text = "Main Page";
+            this.main_page.UseVisualStyleBackColor = true;
+            this.main_page.Click += new System.EventHandler(this.main_page_Click);
             // 
             // Upload_Audit_Data
             // 
