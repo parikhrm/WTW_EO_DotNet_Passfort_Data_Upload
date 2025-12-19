@@ -29,35 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.reset = new System.Windows.Forms.Button();
-            this.update = new System.Windows.Forms.Button();
-            this.completion_date = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.sanction_resolved_date = new System.Windows.Forms.DateTimePicker();
-            this.sanction_raised_date = new System.Windows.Forms.DateTimePicker();
-            this.requestor_email_address = new System.Windows.Forms.TextBox();
-            this.orgid = new System.Windows.Forms.TextBox();
-            this.match_criteria = new System.Windows.Forms.ComboBox();
-            this.id = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.searchby_inquiry_name = new System.Windows.Forms.TextBox();
-            this.search_entityid = new System.Windows.Forms.TextBox();
-            this.searchby_match_name = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.main_page = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.entityid = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.bulk_update = new System.Windows.Forms.Button();
             this.txt_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_Firm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_Firm_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,6 +70,36 @@
             this.txt_Business_Confirmed_Client_Inactive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_OrgID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_Requestor_Email_Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bulk_update = new System.Windows.Forms.Button();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.entityid = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.reset = new System.Windows.Forms.Button();
+            this.update = new System.Windows.Forms.Button();
+            this.completion_date = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.sanction_resolved_date = new System.Windows.Forms.DateTimePicker();
+            this.sanction_raised_date = new System.Windows.Forms.DateTimePicker();
+            this.requestor_email_address = new System.Windows.Forms.TextBox();
+            this.orgid = new System.Windows.Forms.TextBox();
+            this.match_criteria = new System.Windows.Forms.ComboBox();
+            this.id = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.searchby_inquiry_name = new System.Windows.Forms.TextBox();
+            this.search_entityid = new System.Windows.Forms.TextBox();
+            this.searchby_match_name = new System.Windows.Forms.TextBox();
+            this.main_page = new System.Windows.Forms.Button();
+            this.current_datetime = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -157,287 +158,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1693, 454);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.bulk_update);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.entityid);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.reset);
-            this.groupBox1.Controls.Add(this.update);
-            this.groupBox1.Controls.Add(this.completion_date);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.sanction_resolved_date);
-            this.groupBox1.Controls.Add(this.sanction_raised_date);
-            this.groupBox1.Controls.Add(this.requestor_email_address);
-            this.groupBox1.Controls.Add(this.orgid);
-            this.groupBox1.Controls.Add(this.match_criteria);
-            this.groupBox1.Controls.Add(this.id);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(22, 53);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1693, 245);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            // 
-            // reset
-            // 
-            this.reset.Location = new System.Drawing.Point(873, 166);
-            this.reset.Name = "reset";
-            this.reset.Size = new System.Drawing.Size(146, 40);
-            this.reset.TabIndex = 15;
-            this.reset.Text = "Reset";
-            this.reset.UseVisualStyleBackColor = true;
-            // 
-            // update
-            // 
-            this.update.Location = new System.Drawing.Point(531, 165);
-            this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(146, 40);
-            this.update.TabIndex = 14;
-            this.update.Text = "Update";
-            this.update.UseVisualStyleBackColor = true;
-            this.update.Click += new System.EventHandler(this.update_Click);
-            // 
-            // completion_date
-            // 
-            this.completion_date.CustomFormat = " ";
-            this.completion_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.completion_date.Location = new System.Drawing.Point(929, 95);
-            this.completion_date.Name = "completion_date";
-            this.completion_date.Size = new System.Drawing.Size(257, 26);
-            this.completion_date.TabIndex = 13;
-            this.completion_date.ValueChanged += new System.EventHandler(this.completion_date_ValueChanged);
-            this.completion_date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.completion_date_KeyDown);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(786, 94);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(128, 20);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Completion Date";
-            // 
-            // sanction_resolved_date
-            // 
-            this.sanction_resolved_date.CustomFormat = " ";
-            this.sanction_resolved_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.sanction_resolved_date.Location = new System.Drawing.Point(520, 94);
-            this.sanction_resolved_date.Name = "sanction_resolved_date";
-            this.sanction_resolved_date.Size = new System.Drawing.Size(241, 26);
-            this.sanction_resolved_date.TabIndex = 11;
-            this.sanction_resolved_date.ValueChanged += new System.EventHandler(this.sanction_resolved_date_ValueChanged);
-            this.sanction_resolved_date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.sanction_resolved_date_KeyDown);
-            // 
-            // sanction_raised_date
-            // 
-            this.sanction_raised_date.CustomFormat = " ";
-            this.sanction_raised_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.sanction_raised_date.Location = new System.Drawing.Point(126, 95);
-            this.sanction_raised_date.Name = "sanction_raised_date";
-            this.sanction_raised_date.Size = new System.Drawing.Size(229, 26);
-            this.sanction_raised_date.TabIndex = 10;
-            this.sanction_raised_date.ValueChanged += new System.EventHandler(this.sanction_raised_date_ValueChanged);
-            this.sanction_raised_date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.sanction_raised_date_KeyDown);
-            // 
-            // requestor_email_address
-            // 
-            this.requestor_email_address.Location = new System.Drawing.Point(1089, 29);
-            this.requestor_email_address.Name = "requestor_email_address";
-            this.requestor_email_address.Size = new System.Drawing.Size(410, 26);
-            this.requestor_email_address.TabIndex = 9;
-            // 
-            // orgid
-            // 
-            this.orgid.Location = new System.Drawing.Point(636, 27);
-            this.orgid.Name = "orgid";
-            this.orgid.Size = new System.Drawing.Size(259, 26);
-            this.orgid.TabIndex = 8;
-            // 
-            // match_criteria
-            // 
-            this.match_criteria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.match_criteria.FormattingEnabled = true;
-            this.match_criteria.Location = new System.Drawing.Point(297, 27);
-            this.match_criteria.Name = "match_criteria";
-            this.match_criteria.Size = new System.Drawing.Size(229, 28);
-            this.match_criteria.TabIndex = 7;
-            // 
-            // id
-            // 
-            this.id.Location = new System.Drawing.Point(64, 32);
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(120, 26);
-            this.id.TabIndex = 6;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(380, 94);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 40);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Sanction \r\nResolved Date";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 95);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 40);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Sanction \r\nRaised Date";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(935, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 40);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Requestor Email\r\nAddress";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(555, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "OrgID";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(223, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 40);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Match \r\nCriteria";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(200, 352);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(177, 20);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Search by Inquiry Name";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(524, 352);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(145, 20);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Search by Entity ID";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(833, 352);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(174, 20);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Search by Match Name";
-            // 
-            // searchby_inquiry_name
-            // 
-            this.searchby_inquiry_name.Location = new System.Drawing.Point(163, 316);
-            this.searchby_inquiry_name.Name = "searchby_inquiry_name";
-            this.searchby_inquiry_name.Size = new System.Drawing.Size(258, 26);
-            this.searchby_inquiry_name.TabIndex = 5;
-            this.searchby_inquiry_name.TextChanged += new System.EventHandler(this.searchby_inquiry_name_TextChanged);
-            // 
-            // search_entityid
-            // 
-            this.search_entityid.Location = new System.Drawing.Point(463, 315);
-            this.search_entityid.Name = "search_entityid";
-            this.search_entityid.Size = new System.Drawing.Size(265, 26);
-            this.search_entityid.TabIndex = 6;
-            this.search_entityid.TextChanged += new System.EventHandler(this.search_entityid_TextChanged);
-            // 
-            // searchby_match_name
-            // 
-            this.searchby_match_name.Location = new System.Drawing.Point(791, 316);
-            this.searchby_match_name.Name = "searchby_match_name";
-            this.searchby_match_name.Size = new System.Drawing.Size(262, 26);
-            this.searchby_match_name.TabIndex = 7;
-            this.searchby_match_name.TextChanged += new System.EventHandler(this.searchby_match_name_TextChanged);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(1221, 98);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(268, 24);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Business Confirmed Client Active";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // main_page
-            // 
-            this.main_page.Location = new System.Drawing.Point(22, 5);
-            this.main_page.Name = "main_page";
-            this.main_page.Size = new System.Drawing.Size(120, 45);
-            this.main_page.TabIndex = 138;
-            this.main_page.Text = "Main Page";
-            this.main_page.UseVisualStyleBackColor = true;
-            this.main_page.Click += new System.EventHandler(this.main_page_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(22, 165);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 20);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "EntityID";
-            // 
-            // entityid
-            // 
-            this.entityid.Location = new System.Drawing.Point(116, 165);
-            this.entityid.Name = "entityid";
-            this.entityid.Size = new System.Drawing.Size(205, 26);
-            this.entityid.TabIndex = 18;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(929, 136);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(439, 24);
-            this.checkBox2.TabIndex = 19;
-            this.checkBox2.Text = "Update completion date for all the records of this EntityID";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // bulk_update
-            // 
-            this.bulk_update.Location = new System.Drawing.Point(704, 166);
-            this.bulk_update.Name = "bulk_update";
-            this.bulk_update.Size = new System.Drawing.Size(146, 40);
-            this.bulk_update.TabIndex = 20;
-            this.bulk_update.Text = "Bulk Update";
-            this.bulk_update.UseVisualStyleBackColor = true;
-            this.bulk_update.Click += new System.EventHandler(this.bulk_update_Click);
             // 
             // txt_ID
             // 
@@ -767,12 +487,301 @@
             this.txt_Requestor_Email_Address.Name = "txt_Requestor_Email_Address";
             this.txt_Requestor_Email_Address.Width = 150;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.bulk_update);
+            this.groupBox1.Controls.Add(this.checkBox2);
+            this.groupBox1.Controls.Add(this.entityid);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.reset);
+            this.groupBox1.Controls.Add(this.update);
+            this.groupBox1.Controls.Add(this.completion_date);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.sanction_resolved_date);
+            this.groupBox1.Controls.Add(this.sanction_raised_date);
+            this.groupBox1.Controls.Add(this.requestor_email_address);
+            this.groupBox1.Controls.Add(this.orgid);
+            this.groupBox1.Controls.Add(this.match_criteria);
+            this.groupBox1.Controls.Add(this.id);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(22, 53);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1693, 245);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            // 
+            // bulk_update
+            // 
+            this.bulk_update.Location = new System.Drawing.Point(704, 166);
+            this.bulk_update.Name = "bulk_update";
+            this.bulk_update.Size = new System.Drawing.Size(146, 40);
+            this.bulk_update.TabIndex = 20;
+            this.bulk_update.Text = "Bulk Update";
+            this.bulk_update.UseVisualStyleBackColor = true;
+            this.bulk_update.Click += new System.EventHandler(this.bulk_update_Click);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(929, 136);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(439, 24);
+            this.checkBox2.TabIndex = 19;
+            this.checkBox2.Text = "Update completion date for all the records of this EntityID";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // entityid
+            // 
+            this.entityid.Location = new System.Drawing.Point(116, 165);
+            this.entityid.Name = "entityid";
+            this.entityid.Size = new System.Drawing.Size(205, 26);
+            this.entityid.TabIndex = 18;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(22, 165);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(66, 20);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "EntityID";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(1221, 98);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(268, 24);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.Text = "Business Confirmed Client Active";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // reset
+            // 
+            this.reset.Location = new System.Drawing.Point(873, 166);
+            this.reset.Name = "reset";
+            this.reset.Size = new System.Drawing.Size(146, 40);
+            this.reset.TabIndex = 15;
+            this.reset.Text = "Reset";
+            this.reset.UseVisualStyleBackColor = true;
+            // 
+            // update
+            // 
+            this.update.Location = new System.Drawing.Point(531, 165);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(146, 40);
+            this.update.TabIndex = 14;
+            this.update.Text = "Update";
+            this.update.UseVisualStyleBackColor = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
+            // 
+            // completion_date
+            // 
+            this.completion_date.CustomFormat = " ";
+            this.completion_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.completion_date.Location = new System.Drawing.Point(929, 95);
+            this.completion_date.Name = "completion_date";
+            this.completion_date.Size = new System.Drawing.Size(257, 26);
+            this.completion_date.TabIndex = 13;
+            this.completion_date.ValueChanged += new System.EventHandler(this.completion_date_ValueChanged);
+            this.completion_date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.completion_date_KeyDown);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(786, 94);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(128, 20);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Completion Date";
+            // 
+            // sanction_resolved_date
+            // 
+            this.sanction_resolved_date.CustomFormat = " ";
+            this.sanction_resolved_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.sanction_resolved_date.Location = new System.Drawing.Point(520, 94);
+            this.sanction_resolved_date.Name = "sanction_resolved_date";
+            this.sanction_resolved_date.Size = new System.Drawing.Size(241, 26);
+            this.sanction_resolved_date.TabIndex = 11;
+            this.sanction_resolved_date.ValueChanged += new System.EventHandler(this.sanction_resolved_date_ValueChanged);
+            this.sanction_resolved_date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.sanction_resolved_date_KeyDown);
+            // 
+            // sanction_raised_date
+            // 
+            this.sanction_raised_date.CustomFormat = " ";
+            this.sanction_raised_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.sanction_raised_date.Location = new System.Drawing.Point(126, 95);
+            this.sanction_raised_date.Name = "sanction_raised_date";
+            this.sanction_raised_date.Size = new System.Drawing.Size(229, 26);
+            this.sanction_raised_date.TabIndex = 10;
+            this.sanction_raised_date.ValueChanged += new System.EventHandler(this.sanction_raised_date_ValueChanged);
+            this.sanction_raised_date.KeyDown += new System.Windows.Forms.KeyEventHandler(this.sanction_raised_date_KeyDown);
+            // 
+            // requestor_email_address
+            // 
+            this.requestor_email_address.Location = new System.Drawing.Point(1089, 29);
+            this.requestor_email_address.Name = "requestor_email_address";
+            this.requestor_email_address.Size = new System.Drawing.Size(410, 26);
+            this.requestor_email_address.TabIndex = 9;
+            // 
+            // orgid
+            // 
+            this.orgid.Location = new System.Drawing.Point(636, 27);
+            this.orgid.Name = "orgid";
+            this.orgid.Size = new System.Drawing.Size(259, 26);
+            this.orgid.TabIndex = 8;
+            // 
+            // match_criteria
+            // 
+            this.match_criteria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.match_criteria.FormattingEnabled = true;
+            this.match_criteria.Location = new System.Drawing.Point(297, 27);
+            this.match_criteria.Name = "match_criteria";
+            this.match_criteria.Size = new System.Drawing.Size(229, 28);
+            this.match_criteria.TabIndex = 7;
+            // 
+            // id
+            // 
+            this.id.Location = new System.Drawing.Point(64, 32);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(120, 26);
+            this.id.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(380, 94);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 40);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Sanction \r\nResolved Date";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(22, 95);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(98, 40);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Sanction \r\nRaised Date";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(935, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(127, 40);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Requestor Email\r\nAddress";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(555, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "OrgID";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(223, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 40);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Match \r\nCriteria";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ID";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(200, 352);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(177, 20);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Search by Inquiry Name";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(524, 352);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(145, 20);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Search by Entity ID";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(833, 352);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(174, 20);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Search by Match Name";
+            // 
+            // searchby_inquiry_name
+            // 
+            this.searchby_inquiry_name.Location = new System.Drawing.Point(163, 316);
+            this.searchby_inquiry_name.Name = "searchby_inquiry_name";
+            this.searchby_inquiry_name.Size = new System.Drawing.Size(258, 26);
+            this.searchby_inquiry_name.TabIndex = 5;
+            this.searchby_inquiry_name.TextChanged += new System.EventHandler(this.searchby_inquiry_name_TextChanged);
+            // 
+            // search_entityid
+            // 
+            this.search_entityid.Location = new System.Drawing.Point(463, 315);
+            this.search_entityid.Name = "search_entityid";
+            this.search_entityid.Size = new System.Drawing.Size(265, 26);
+            this.search_entityid.TabIndex = 6;
+            this.search_entityid.TextChanged += new System.EventHandler(this.search_entityid_TextChanged);
+            // 
+            // searchby_match_name
+            // 
+            this.searchby_match_name.Location = new System.Drawing.Point(791, 316);
+            this.searchby_match_name.Name = "searchby_match_name";
+            this.searchby_match_name.Size = new System.Drawing.Size(262, 26);
+            this.searchby_match_name.TabIndex = 7;
+            this.searchby_match_name.TextChanged += new System.EventHandler(this.searchby_match_name_TextChanged);
+            // 
+            // main_page
+            // 
+            this.main_page.Location = new System.Drawing.Point(22, 5);
+            this.main_page.Name = "main_page";
+            this.main_page.Size = new System.Drawing.Size(120, 45);
+            this.main_page.TabIndex = 138;
+            this.main_page.Text = "Main Page";
+            this.main_page.UseVisualStyleBackColor = true;
+            this.main_page.Click += new System.EventHandler(this.main_page_Click);
+            // 
+            // current_datetime
+            // 
+            this.current_datetime.Location = new System.Drawing.Point(598, 12);
+            this.current_datetime.Name = "current_datetime";
+            this.current_datetime.Size = new System.Drawing.Size(101, 26);
+            this.current_datetime.TabIndex = 139;
+            // 
             // Workflow_PF_Audit_Data
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1760, 904);
+            this.Controls.Add(this.current_datetime);
             this.Controls.Add(this.main_page);
             this.Controls.Add(this.searchby_match_name);
             this.Controls.Add(this.search_entityid);
@@ -867,5 +876,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txt_OrgID;
         private System.Windows.Forms.DataGridViewTextBoxColumn txt_Requestor_Email_Address;
         private System.Windows.Forms.Button bulk_update;
+        private System.Windows.Forms.DateTimePicker current_datetime;
     }
 }

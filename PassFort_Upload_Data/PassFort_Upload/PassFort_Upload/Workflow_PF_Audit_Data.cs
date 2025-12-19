@@ -26,11 +26,14 @@ namespace PassFort_Upload
 
         private void Workflow_PF_Audit_Data_Load(object sender, EventArgs e)
         {
+            match_criteria_list();
             reset_overall();
         }
 
         public void reset_overall()
         {
+            current_datetime.Visible = false;
+            current_datetime.Text = DateTime.Now.ToLongDateString();
             id.Enabled = false;
             id.Text = string.Empty;
             match_criteria.SelectedIndex = -1;
@@ -82,6 +85,28 @@ namespace PassFort_Upload
             }
         }
 
+        public void match_criteria_list()
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
+            }
+
+            try
+            {
+                DropDown_References obj_match_criteria = new DropDown_References();
+                DataTable dtaa = new DataTable();
+                obj_match_criteria.match_criteria_list (dtaa);
+                match_criteria.DataSource = dtaa;
+                match_criteria.DisplayMember = "Match_Criteria";
+                conn.Close();
+                match_criteria.SelectedIndex = -1;
+            }
+            catch (Exception ab)
+            {
+                MessageBox.Show("Error Generated Details: " + ab.ToString());
+            }
+        }
         public void datagridview_display_overall()
         {
             if (conn.State == ConnectionState.Open)
@@ -249,6 +274,18 @@ namespace PassFort_Upload
                 {
                     MessageBox.Show("Please update Requestor Email Address");
                 }
+                else if(sanction_raised_date.Value.Date > current_datetime.Value.Date)
+                {
+                    MessageBox.Show("Sanction Raised Date cannot be more than Today's date");
+                }
+                else if (sanction_resolved_date.Value.Date > current_datetime.Value.Date)
+                {
+                    MessageBox.Show("Sanction Resolved Date cannot be more than Today's date");
+                }
+                else if (completion_date.Value.Date > current_datetime.Value.Date)
+                {
+                    MessageBox.Show("Completion Date cannot be more than Today's date");
+                }
                 else
                 {
                     conn.Open();
@@ -279,7 +316,7 @@ namespace PassFort_Upload
                 if (e.RowIndex >= 0)
                 {
                     DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-                    id.Text = row.Cells["txt_RequestID"].Value.ToString();
+                    id.Text = row.Cells["txt_ID"].Value.ToString();
                     if(string.IsNullOrEmpty(row.Cells["txt_Match_Criteria"].Value.ToString()))
                     {
                         match_criteria.SelectedIndex = -1;
@@ -390,6 +427,10 @@ namespace PassFort_Upload
                 else if(string.IsNullOrEmpty(orgid.Text))
                 {
                     MessageBox.Show("Please update OrgID");
+                }
+                else if(completion_date.Value.Date > current_datetime.Value.Date)
+                {
+                    MessageBox.Show("Completion Date cannot be more than Today's date");
                 }
                 else
                 {

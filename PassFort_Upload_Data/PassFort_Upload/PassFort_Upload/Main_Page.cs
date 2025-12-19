@@ -30,5 +30,12 @@ namespace PassFort_Upload
             Upload_Audit_Data obj1 = new Upload_Audit_Data();
             obj1.Show();
         }
+
+        private void pf_audit_data_workflow_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Workflow_PF_Audit_Data obj1 = new Workflow_PF_Audit_Data();
+            obj1.Show();
+        }
     }
 }

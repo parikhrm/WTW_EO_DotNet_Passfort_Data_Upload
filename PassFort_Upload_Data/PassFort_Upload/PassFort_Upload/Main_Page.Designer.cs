@@ -30,7 +30,7 @@
         {
             this.pf_data = new System.Windows.Forms.Button();
             this.pf_audit_data = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pf_audit_data_workflow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // pf_data
@@ -57,16 +57,17 @@
             this.pf_audit_data.UseVisualStyleBackColor = false;
             this.pf_audit_data.Click += new System.EventHandler(this.pf_audit_data_Click);
             // 
-            // button1
+            // pf_audit_data_workflow
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(408, 288);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(265, 139);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Upload PF Audit Data";
-            this.button1.UseVisualStyleBackColor = false;
+            this.pf_audit_data_workflow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.pf_audit_data_workflow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pf_audit_data_workflow.Location = new System.Drawing.Point(408, 288);
+            this.pf_audit_data_workflow.Name = "pf_audit_data_workflow";
+            this.pf_audit_data_workflow.Size = new System.Drawing.Size(265, 139);
+            this.pf_audit_data_workflow.TabIndex = 2;
+            this.pf_audit_data_workflow.Text = "Workflow PF Audit Data";
+            this.pf_audit_data_workflow.UseVisualStyleBackColor = false;
+            this.pf_audit_data_workflow.Click += new System.EventHandler(this.pf_audit_data_workflow_Click);
             // 
             // Main_Page
             // 
@@ -74,7 +75,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1711, 651);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pf_audit_data_workflow);
             this.Controls.Add(this.pf_audit_data);
             this.Controls.Add(this.pf_data);
             this.Name = "Main_Page";
@@ -88,6 +89,6 @@
 
         private System.Windows.Forms.Button pf_data;
         private System.Windows.Forms.Button pf_audit_data;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button pf_audit_data_workflow;
     }
 }
