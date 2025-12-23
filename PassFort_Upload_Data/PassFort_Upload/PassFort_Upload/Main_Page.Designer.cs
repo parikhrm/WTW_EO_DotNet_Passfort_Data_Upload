@@ -31,6 +31,7 @@
             this.pf_data = new System.Windows.Forms.Button();
             this.pf_audit_data = new System.Windows.Forms.Button();
             this.pf_audit_data_workflow = new System.Windows.Forms.Button();
+            this.accesslevel = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // pf_data
@@ -69,18 +70,29 @@
             this.pf_audit_data_workflow.UseVisualStyleBackColor = false;
             this.pf_audit_data_workflow.Click += new System.EventHandler(this.pf_audit_data_workflow_Click);
             // 
+            // accesslevel
+            // 
+            this.accesslevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.accesslevel.FormattingEnabled = true;
+            this.accesslevel.Location = new System.Drawing.Point(1431, 32);
+            this.accesslevel.Name = "accesslevel";
+            this.accesslevel.Size = new System.Drawing.Size(170, 28);
+            this.accesslevel.TabIndex = 3;
+            // 
             // Main_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1711, 651);
+            this.Controls.Add(this.accesslevel);
             this.Controls.Add(this.pf_audit_data_workflow);
             this.Controls.Add(this.pf_audit_data);
             this.Controls.Add(this.pf_data);
             this.Name = "Main_Page";
             this.Text = "Main_Page";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Main_Page_Load);
             this.ResumeLayout(false);
 
         }
@@ -90,5 +102,6 @@
         private System.Windows.Forms.Button pf_data;
         private System.Windows.Forms.Button pf_audit_data;
         private System.Windows.Forms.Button pf_audit_data_workflow;
+        private System.Windows.Forms.ComboBox accesslevel;
     }
 }
