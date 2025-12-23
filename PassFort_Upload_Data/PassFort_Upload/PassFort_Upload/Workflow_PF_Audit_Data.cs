@@ -48,7 +48,7 @@ namespace PassFort_Upload
 
         private void sanction_raised_date_ValueChanged(object sender, EventArgs e)
         {
-            sanction_raised_date.CustomFormat = " ";
+            sanction_raised_date.CustomFormat = "dd-MMMM-yyyy";
         }
 
         private void sanction_raised_date_KeyDown(object sender, KeyEventArgs e)
@@ -61,7 +61,7 @@ namespace PassFort_Upload
 
         private void sanction_resolved_date_ValueChanged(object sender, EventArgs e)
         {
-            sanction_resolved_date.CustomFormat = " ";
+            sanction_resolved_date.CustomFormat = "dd-MMMM-yyyy";
         }
 
         private void sanction_resolved_date_KeyDown(object sender, KeyEventArgs e)
@@ -74,7 +74,7 @@ namespace PassFort_Upload
 
         private void completion_date_ValueChanged(object sender, EventArgs e)
         {
-            completion_date.CustomFormat = " ";
+            completion_date.CustomFormat = "dd-MMMM-yyyy";
         }
 
         private void completion_date_KeyDown(object sender, KeyEventArgs e)
