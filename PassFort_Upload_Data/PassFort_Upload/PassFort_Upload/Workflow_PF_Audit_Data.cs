@@ -256,6 +256,7 @@ namespace PassFort_Upload
                 {
                     cmd.Parameters.AddWithValue("@Business_Confirmed_Client_InActive", DBNull.Value);
                 }
+                cmd.Parameters.AddWithValue("@LastUpdatedBy",Environment.UserName.ToString());
 
                 //if conditions
                 if (match_criteria.Text == "Exact" && string.IsNullOrEmpty(orgid.Text))
@@ -418,6 +419,7 @@ namespace PassFort_Upload
                 cmd.Parameters["@Message"].Direction = ParameterDirection.Output;
                 cmd.Parameters.AddWithValue("@EntityID", entityid.Text);
                 cmd.Parameters.AddWithValue("@Completion_Date", completion_date.Value.Date);
+                cmd.Parameters.AddWithValue("@LastUpdatedBy",Environment.UserName.ToString());
 
                 //if conditions
                 if(completion_date.Text.Trim() == string.Empty)
@@ -448,6 +450,18 @@ namespace PassFort_Upload
             catch (Exception ab)
             {
                 MessageBox.Show("Error Generated Details :" + ab.ToString());
+            }
+        }
+
+        private void rawdata_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("https://app.powerbi.com/groups/81c3ab7d-0a2a-46f2-b54f-38eb239011a1/reports/930a495d-9c0b-4039-a7b8-b0a12fe94dc8/8a3ef574d346ac4b6c16?experience=power-bi");
+            }
+            catch (Exception ab)
+            {
+                MessageBox.Show("Unable to open link that was clicked. Following are the error generated details" + ab.ToString());
             }
         }
     }

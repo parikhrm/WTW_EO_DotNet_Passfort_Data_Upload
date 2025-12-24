@@ -100,6 +100,7 @@
             this.searchby_match_name = new System.Windows.Forms.TextBox();
             this.main_page = new System.Windows.Forms.Button();
             this.current_datetime = new System.Windows.Forms.DateTimePicker();
+            this.rawdata = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -710,7 +711,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(200, 352);
+            this.label8.Location = new System.Drawing.Point(237, 352);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(177, 20);
             this.label8.TabIndex = 2;
@@ -719,7 +720,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(524, 352);
+            this.label9.Location = new System.Drawing.Point(561, 352);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(145, 20);
             this.label9.TabIndex = 3;
@@ -728,7 +729,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(833, 352);
+            this.label10.Location = new System.Drawing.Point(870, 352);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(174, 20);
             this.label10.TabIndex = 4;
@@ -736,7 +737,7 @@
             // 
             // searchby_inquiry_name
             // 
-            this.searchby_inquiry_name.Location = new System.Drawing.Point(163, 316);
+            this.searchby_inquiry_name.Location = new System.Drawing.Point(200, 316);
             this.searchby_inquiry_name.Name = "searchby_inquiry_name";
             this.searchby_inquiry_name.Size = new System.Drawing.Size(258, 26);
             this.searchby_inquiry_name.TabIndex = 5;
@@ -744,7 +745,7 @@
             // 
             // search_entityid
             // 
-            this.search_entityid.Location = new System.Drawing.Point(463, 315);
+            this.search_entityid.Location = new System.Drawing.Point(500, 315);
             this.search_entityid.Name = "search_entityid";
             this.search_entityid.Size = new System.Drawing.Size(265, 26);
             this.search_entityid.TabIndex = 6;
@@ -752,7 +753,7 @@
             // 
             // searchby_match_name
             // 
-            this.searchby_match_name.Location = new System.Drawing.Point(791, 316);
+            this.searchby_match_name.Location = new System.Drawing.Point(828, 316);
             this.searchby_match_name.Name = "searchby_match_name";
             this.searchby_match_name.Size = new System.Drawing.Size(262, 26);
             this.searchby_match_name.TabIndex = 7;
@@ -775,12 +776,23 @@
             this.current_datetime.Size = new System.Drawing.Size(101, 26);
             this.current_datetime.TabIndex = 139;
             // 
+            // rawdata
+            // 
+            this.rawdata.Location = new System.Drawing.Point(22, 339);
+            this.rawdata.Name = "rawdata";
+            this.rawdata.Size = new System.Drawing.Size(120, 32);
+            this.rawdata.TabIndex = 140;
+            this.rawdata.Text = "Raw Data";
+            this.rawdata.UseVisualStyleBackColor = true;
+            this.rawdata.Click += new System.EventHandler(this.rawdata_Click);
+            // 
             // Workflow_PF_Audit_Data
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1760, 904);
+            this.Controls.Add(this.rawdata);
             this.Controls.Add(this.current_datetime);
             this.Controls.Add(this.main_page);
             this.Controls.Add(this.searchby_match_name);
@@ -877,5 +889,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txt_Requestor_Email_Address;
         private System.Windows.Forms.Button bulk_update;
         private System.Windows.Forms.DateTimePicker current_datetime;
+        private System.Windows.Forms.Button rawdata;
     }
 }
