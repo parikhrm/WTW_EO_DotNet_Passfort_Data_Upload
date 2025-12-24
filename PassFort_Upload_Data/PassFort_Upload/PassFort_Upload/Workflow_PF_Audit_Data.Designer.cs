@@ -778,7 +778,7 @@
             // 
             // rawdata
             // 
-            this.rawdata.Location = new System.Drawing.Point(22, 339);
+            this.rawdata.Location = new System.Drawing.Point(24, 339);
             this.rawdata.Name = "rawdata";
             this.rawdata.Size = new System.Drawing.Size(120, 32);
             this.rawdata.TabIndex = 140;
