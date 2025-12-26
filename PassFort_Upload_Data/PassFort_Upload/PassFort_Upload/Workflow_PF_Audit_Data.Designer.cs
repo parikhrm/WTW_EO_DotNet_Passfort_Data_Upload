@@ -101,8 +101,22 @@
             this.main_page = new System.Windows.Forms.Button();
             this.current_datetime = new System.Windows.Forms.DateTimePicker();
             this.rawdata = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.allocation_from = new System.Windows.Forms.NumericUpDown();
+            this.allocation_to = new System.Windows.Forms.NumericUpDown();
+            this.allocation_entityid = new System.Windows.Forms.TextBox();
+            this.allocation_associate_name = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.allocation_update = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.allocation_from)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allocation_to)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -152,11 +166,11 @@
             this.txt_Business_Confirmed_Client_Inactive,
             this.txt_OrgID,
             this.txt_Requestor_Email_Address});
-            this.dataGridView1.Location = new System.Drawing.Point(22, 394);
+            this.dataGridView1.Location = new System.Drawing.Point(17, 395);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1693, 454);
+            this.dataGridView1.Size = new System.Drawing.Size(1882, 705);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -511,9 +525,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(22, 53);
+            this.groupBox1.Location = new System.Drawing.Point(17, 53);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1693, 245);
+            this.groupBox1.Size = new System.Drawing.Size(1507, 245);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -711,7 +725,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(237, 352);
+            this.label8.Location = new System.Drawing.Point(230, 347);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(177, 20);
             this.label8.TabIndex = 2;
@@ -720,7 +734,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(561, 352);
+            this.label9.Location = new System.Drawing.Point(554, 347);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(145, 20);
             this.label9.TabIndex = 3;
@@ -729,7 +743,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(870, 352);
+            this.label10.Location = new System.Drawing.Point(863, 347);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(174, 20);
             this.label10.TabIndex = 4;
@@ -737,7 +751,7 @@
             // 
             // searchby_inquiry_name
             // 
-            this.searchby_inquiry_name.Location = new System.Drawing.Point(200, 316);
+            this.searchby_inquiry_name.Location = new System.Drawing.Point(193, 311);
             this.searchby_inquiry_name.Name = "searchby_inquiry_name";
             this.searchby_inquiry_name.Size = new System.Drawing.Size(258, 26);
             this.searchby_inquiry_name.TabIndex = 5;
@@ -745,7 +759,7 @@
             // 
             // search_entityid
             // 
-            this.search_entityid.Location = new System.Drawing.Point(500, 315);
+            this.search_entityid.Location = new System.Drawing.Point(493, 310);
             this.search_entityid.Name = "search_entityid";
             this.search_entityid.Size = new System.Drawing.Size(265, 26);
             this.search_entityid.TabIndex = 6;
@@ -753,7 +767,7 @@
             // 
             // searchby_match_name
             // 
-            this.searchby_match_name.Location = new System.Drawing.Point(828, 316);
+            this.searchby_match_name.Location = new System.Drawing.Point(821, 311);
             this.searchby_match_name.Name = "searchby_match_name";
             this.searchby_match_name.Size = new System.Drawing.Size(262, 26);
             this.searchby_match_name.TabIndex = 7;
@@ -761,7 +775,7 @@
             // 
             // main_page
             // 
-            this.main_page.Location = new System.Drawing.Point(22, 5);
+            this.main_page.Location = new System.Drawing.Point(17, 5);
             this.main_page.Name = "main_page";
             this.main_page.Size = new System.Drawing.Size(120, 45);
             this.main_page.TabIndex = 138;
@@ -778,7 +792,7 @@
             // 
             // rawdata
             // 
-            this.rawdata.Location = new System.Drawing.Point(24, 339);
+            this.rawdata.Location = new System.Drawing.Point(17, 334);
             this.rawdata.Name = "rawdata";
             this.rawdata.Size = new System.Drawing.Size(120, 32);
             this.rawdata.TabIndex = 140;
@@ -786,12 +800,127 @@
             this.rawdata.UseVisualStyleBackColor = true;
             this.rawdata.Click += new System.EventHandler(this.rawdata_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.allocation_update);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.allocation_associate_name);
+            this.groupBox2.Controls.Add(this.allocation_entityid);
+            this.groupBox2.Controls.Add(this.allocation_to);
+            this.groupBox2.Controls.Add(this.allocation_from);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Location = new System.Drawing.Point(1542, 53);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(357, 297);
+            this.groupBox2.TabIndex = 141;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Allocation";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 62);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(106, 20);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Page Number";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 114);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(70, 20);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Entity ID";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(10, 164);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(79, 40);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Associate\r\nName";
+            // 
+            // allocation_from
+            // 
+            this.allocation_from.Location = new System.Drawing.Point(133, 62);
+            this.allocation_from.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.allocation_from.Name = "allocation_from";
+            this.allocation_from.Size = new System.Drawing.Size(83, 26);
+            this.allocation_from.TabIndex = 3;
+            // 
+            // allocation_to
+            // 
+            this.allocation_to.Location = new System.Drawing.Point(237, 61);
+            this.allocation_to.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.allocation_to.Name = "allocation_to";
+            this.allocation_to.Size = new System.Drawing.Size(87, 26);
+            this.allocation_to.TabIndex = 4;
+            // 
+            // allocation_entityid
+            // 
+            this.allocation_entityid.Location = new System.Drawing.Point(133, 114);
+            this.allocation_entityid.Name = "allocation_entityid";
+            this.allocation_entityid.Size = new System.Drawing.Size(191, 26);
+            this.allocation_entityid.TabIndex = 5;
+            // 
+            // allocation_associate_name
+            // 
+            this.allocation_associate_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.allocation_associate_name.FormattingEnabled = true;
+            this.allocation_associate_name.Location = new System.Drawing.Point(133, 166);
+            this.allocation_associate_name.Name = "allocation_associate_name";
+            this.allocation_associate_name.Size = new System.Drawing.Size(191, 28);
+            this.allocation_associate_name.TabIndex = 6;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(133, 26);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(46, 20);
+            this.label15.TabIndex = 7;
+            this.label15.Text = "From";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(237, 25);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(27, 20);
+            this.label16.TabIndex = 8;
+            this.label16.Text = "To";
+            // 
+            // allocation_update
+            // 
+            this.allocation_update.Location = new System.Drawing.Point(96, 233);
+            this.allocation_update.Name = "allocation_update";
+            this.allocation_update.Size = new System.Drawing.Size(146, 40);
+            this.allocation_update.TabIndex = 9;
+            this.allocation_update.Text = "Update";
+            this.allocation_update.UseVisualStyleBackColor = true;
+            this.allocation_update.Click += new System.EventHandler(this.allocation_update_Click);
+            // 
             // Workflow_PF_Audit_Data
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1760, 904);
+            this.ClientSize = new System.Drawing.Size(1924, 1170);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.rawdata);
             this.Controls.Add(this.current_datetime);
             this.Controls.Add(this.main_page);
@@ -810,6 +939,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.allocation_from)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allocation_to)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -890,5 +1023,16 @@
         private System.Windows.Forms.Button bulk_update;
         private System.Windows.Forms.DateTimePicker current_datetime;
         private System.Windows.Forms.Button rawdata;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox allocation_associate_name;
+        private System.Windows.Forms.TextBox allocation_entityid;
+        private System.Windows.Forms.NumericUpDown allocation_to;
+        private System.Windows.Forms.NumericUpDown allocation_from;
+        private System.Windows.Forms.Button allocation_update;
     }
 }

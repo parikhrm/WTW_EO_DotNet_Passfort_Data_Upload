@@ -27,6 +27,7 @@ namespace PassFort_Upload
         private void Workflow_PF_Audit_Data_Load(object sender, EventArgs e)
         {
             match_criteria_list();
+            empname_list();
             reset_overall();
         }
 
@@ -43,6 +44,10 @@ namespace PassFort_Upload
             sanction_resolved_date.CustomFormat = " ";
             completion_date.CustomFormat = " ";
             checkBox1.Checked = false;
+            allocation_associate_name.SelectedIndex = -1;
+            allocation_from.Value = 0;
+            allocation_to.Value = 0;
+            allocation_entityid.Text = string.Empty;
             datagridview_display_overall();
         }
 
@@ -107,6 +112,29 @@ namespace PassFort_Upload
                 MessageBox.Show("Error Generated Details: " + ab.ToString());
             }
         }
+
+        public void empname_list()
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
+            }
+
+            try
+            {
+                DropDown_References obj_empname = new DropDown_References();
+                DataTable dtaa = new DataTable();
+                obj_empname.emp_details_list_overall (dtaa);
+                allocation_associate_name.DataSource = dtaa;
+                allocation_associate_name.DisplayMember = "EmpName";
+                conn.Close();
+                allocation_associate_name.SelectedIndex = -1;
+            }
+            catch (Exception ab)
+            {
+                MessageBox.Show("Error Generated Details: " + ab.ToString());
+            }
+        }
         public void datagridview_display_overall()
         {
             if (conn.State == ConnectionState.Open)
@@ -126,7 +154,7 @@ namespace PassFort_Upload
                 if (string.IsNullOrEmpty(searchby_inquiry_name.Text) && string.IsNullOrEmpty(searchby_match_name.Text) && string.IsNullOrEmpty(search_entityid.Text))
                 {
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "select top 100 Firm,Firm_Name,Submitted,BatchID,Inquiry_PM,InquiryID,Type_P_O,Inquiry_Name,EntityID,Match_Name,Match_Status,Match_Score,TrackingID,ReportingID,Address,City,State,Country,Postal_Code,Age,DOB,Global_Search,Risk_Priority,Event_Codes,Most_Recent_Event_Date,PEP_Type_Level,PEP_Rating,Entity_Addresses,Entity_Date_of_Birth,AI_Alert_Confidence,Inquiry_Notes,Match_Criteria,ID,LastUpdatedBy,LastUpdatedDateTime,Completion_Date,Sanction_Raised_Date,Sanction_Resolved_Date,Business_Confirmed_Client_Inactive,OrgID,Requestor_Email_Address from dbo.tbl_passfort_data_upload_daily_dotnet_audit_archive with(nolock) where (Event_Codes like '%WLT%' or Inquiry_Notes like '%SNX%' or Inquiry_Notes like '%SAN%') order by BatchID, EntityID";
+                    cmd.CommandText = "select top 100 Firm,Firm_Name,Submitted,BatchID,Inquiry_PM,InquiryID,Type_P_O,Inquiry_Name,EntityID,Match_Name,Match_Status,Match_Score,TrackingID,ReportingID,Address,City,State,Country,Postal_Code,Age,DOB,Global_Search,Risk_Priority,Event_Codes,Most_Recent_Event_Date,PEP_Type_Level,PEP_Rating,Entity_Addresses,Entity_Date_of_Birth,AI_Alert_Confidence,Inquiry_Notes,Match_Criteria,ID,LastUpdatedBy,LastUpdatedDateTime,Completion_Date,Sanction_Raised_Date,Sanction_Resolved_Date,Business_Confirmed_Client_Inactive,OrgID,Requestor_Email_Address from dbo.tbl_passfort_data_upload_daily_dotnet_audit_archive with(nolock) where (Event_Codes like '%WLT%' or Inquiry_Notes like '%SNX%' or Inquiry_Notes like '%SAN%') order by ID,BatchID, EntityID";
                 }
                 else
                 {
@@ -462,6 +490,67 @@ namespace PassFort_Upload
             catch (Exception ab)
             {
                 MessageBox.Show("Unable to open link that was clicked. Following are the error generated details" + ab.ToString());
+            }
+        }
+
+        private void allocation_update_Click(object sender, EventArgs e)
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
+            }
+            try
+            {
+                cmd.Parameters.Clear();
+                conn.ConnectionString = connectionstringtxt;
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "dbo.usp_passfort_data_audit_allocation_datedotnet";
+                cmd.Parameters.Add("@Message", SqlDbType.NVarChar, 1000);
+                cmd.Parameters["@Message"].Direction = ParameterDirection.Output;
+                cmd.Parameters.AddWithValue("@EntityID", allocation_entityid.Text);
+                cmd.Parameters.AddWithValue("@AssociateName", allocation_associate_name.Text);
+                cmd.Parameters.AddWithValue("@AllocatedBy",Environment.UserName.ToString());
+                cmd.Parameters.AddWithValue("@From",allocation_from.Value);
+                cmd.Parameters.AddWithValue("@To",allocation_to.Value);
+
+                //if conditions
+                if (string.IsNullOrEmpty(allocation_entityid.Text))
+                {
+                    MessageBox.Show("Please enter EntityID");
+                }
+                else if (string.IsNullOrEmpty(allocation_associate_name.Text))
+                {
+                    MessageBox.Show("Please select Associate Name");
+                }
+                else if (allocation_from.Value < allocation_to.Value)
+                {
+                    MessageBox.Show("Page number From value cannot be less the Page number to value");
+                }
+                else if(allocation_from.Value <= 0)
+                {
+                    MessageBox.Show("Page number from value cannot less than or equal to 0");
+                }
+                else if(allocation_to.Value <= 0)
+                {
+                    MessageBox.Show("Page number To value cannot be less than or equal to 0");
+                }
+                else
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.ExecuteNonQuery();
+                    string uploadmessage = cmd.Parameters["@Message"].Value.ToString();
+                    MessageBox.Show("" + uploadmessage.ToString());
+                    cmd.Parameters.Clear();
+                    reset_overall();
+                    conn.Close();
+                }
+
+            }
+            catch (Exception ab)
+            {
+                MessageBox.Show("Error Generated Details :" + ab.ToString());
             }
         }
     }
