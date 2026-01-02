@@ -237,7 +237,7 @@ namespace PassFort_Upload
                         {
                             conn.Close();
                         }
-                        //MessageBox.Show("Error Generated Details :" + ab.ToString());
+                        MessageBox.Show("Error Generated Details :" + ab.ToString());
                         datagridview_display_overall();
                     }
                 }
