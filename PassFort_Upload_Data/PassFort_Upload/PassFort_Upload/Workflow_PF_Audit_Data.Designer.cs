@@ -102,21 +102,23 @@
             this.current_datetime = new System.Windows.Forms.DateTimePicker();
             this.rawdata = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.allocation_from = new System.Windows.Forms.NumericUpDown();
-            this.allocation_to = new System.Windows.Forms.NumericUpDown();
-            this.allocation_entityid = new System.Windows.Forms.TextBox();
-            this.allocation_associate_name = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.allocation_update = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.allocation_associate_name = new System.Windows.Forms.ComboBox();
+            this.allocation_entityid = new System.Windows.Forms.TextBox();
+            this.allocation_to = new System.Windows.Forms.NumericUpDown();
+            this.allocation_from = new System.Windows.Forms.NumericUpDown();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.searchby_associate_name = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.allocation_from)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.allocation_to)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allocation_from)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -819,44 +821,49 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Allocation";
             // 
-            // label12
+            // allocation_update
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 62);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 20);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Page Number";
+            this.allocation_update.Location = new System.Drawing.Point(96, 233);
+            this.allocation_update.Name = "allocation_update";
+            this.allocation_update.Size = new System.Drawing.Size(146, 40);
+            this.allocation_update.TabIndex = 9;
+            this.allocation_update.Text = "Update";
+            this.allocation_update.UseVisualStyleBackColor = true;
+            this.allocation_update.Click += new System.EventHandler(this.allocation_update_Click);
             // 
-            // label13
+            // label16
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 114);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(70, 20);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Entity ID";
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(237, 25);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(27, 20);
+            this.label16.TabIndex = 8;
+            this.label16.Text = "To";
             // 
-            // label14
+            // label15
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(10, 164);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 40);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Associate\r\nName";
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(133, 26);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(46, 20);
+            this.label15.TabIndex = 7;
+            this.label15.Text = "From";
             // 
-            // allocation_from
+            // allocation_associate_name
             // 
-            this.allocation_from.Location = new System.Drawing.Point(133, 62);
-            this.allocation_from.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.allocation_from.Name = "allocation_from";
-            this.allocation_from.Size = new System.Drawing.Size(83, 26);
-            this.allocation_from.TabIndex = 3;
+            this.allocation_associate_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.allocation_associate_name.FormattingEnabled = true;
+            this.allocation_associate_name.Location = new System.Drawing.Point(133, 166);
+            this.allocation_associate_name.Name = "allocation_associate_name";
+            this.allocation_associate_name.Size = new System.Drawing.Size(191, 28);
+            this.allocation_associate_name.TabIndex = 6;
+            // 
+            // allocation_entityid
+            // 
+            this.allocation_entityid.Location = new System.Drawing.Point(133, 114);
+            this.allocation_entityid.Name = "allocation_entityid";
+            this.allocation_entityid.Size = new System.Drawing.Size(191, 26);
+            this.allocation_entityid.TabIndex = 5;
             // 
             // allocation_to
             // 
@@ -870,56 +877,73 @@
             this.allocation_to.Size = new System.Drawing.Size(87, 26);
             this.allocation_to.TabIndex = 4;
             // 
-            // allocation_entityid
+            // allocation_from
             // 
-            this.allocation_entityid.Location = new System.Drawing.Point(133, 114);
-            this.allocation_entityid.Name = "allocation_entityid";
-            this.allocation_entityid.Size = new System.Drawing.Size(191, 26);
-            this.allocation_entityid.TabIndex = 5;
+            this.allocation_from.Location = new System.Drawing.Point(133, 62);
+            this.allocation_from.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.allocation_from.Name = "allocation_from";
+            this.allocation_from.Size = new System.Drawing.Size(83, 26);
+            this.allocation_from.TabIndex = 3;
             // 
-            // allocation_associate_name
+            // label14
             // 
-            this.allocation_associate_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.allocation_associate_name.FormattingEnabled = true;
-            this.allocation_associate_name.Location = new System.Drawing.Point(133, 166);
-            this.allocation_associate_name.Name = "allocation_associate_name";
-            this.allocation_associate_name.Size = new System.Drawing.Size(191, 28);
-            this.allocation_associate_name.TabIndex = 6;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(10, 164);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(79, 40);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Associate\r\nName";
             // 
-            // label15
+            // label13
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(133, 26);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 20);
-            this.label15.TabIndex = 7;
-            this.label15.Text = "From";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 114);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(70, 20);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Entity ID";
             // 
-            // label16
+            // label12
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(237, 25);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(27, 20);
-            this.label16.TabIndex = 8;
-            this.label16.Text = "To";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 62);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(106, 20);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Page Number";
             // 
-            // allocation_update
+            // label17
             // 
-            this.allocation_update.Location = new System.Drawing.Point(96, 233);
-            this.allocation_update.Name = "allocation_update";
-            this.allocation_update.Size = new System.Drawing.Size(146, 40);
-            this.allocation_update.TabIndex = 9;
-            this.allocation_update.Text = "Update";
-            this.allocation_update.UseVisualStyleBackColor = true;
-            this.allocation_update.Click += new System.EventHandler(this.allocation_update_Click);
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(1161, 347);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(200, 20);
+            this.label17.TabIndex = 142;
+            this.label17.Text = "Search by Associate Name";
+            // 
+            // searchby_associate_name
+            // 
+            this.searchby_associate_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.searchby_associate_name.FormattingEnabled = true;
+            this.searchby_associate_name.Location = new System.Drawing.Point(1118, 311);
+            this.searchby_associate_name.Name = "searchby_associate_name";
+            this.searchby_associate_name.Size = new System.Drawing.Size(292, 28);
+            this.searchby_associate_name.TabIndex = 143;
+            this.searchby_associate_name.SelectedIndexChanged += new System.EventHandler(this.searchby_associate_name_SelectedIndexChanged);
+            this.searchby_associate_name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchby_associate_name_KeyDown);
             // 
             // Workflow_PF_Audit_Data
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1924, 1170);
+            this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.searchby_associate_name);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.rawdata);
             this.Controls.Add(this.current_datetime);
@@ -941,8 +965,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.allocation_from)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.allocation_to)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allocation_from)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1034,5 +1058,7 @@
         private System.Windows.Forms.NumericUpDown allocation_to;
         private System.Windows.Forms.NumericUpDown allocation_from;
         private System.Windows.Forms.Button allocation_update;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox searchby_associate_name;
     }
 }

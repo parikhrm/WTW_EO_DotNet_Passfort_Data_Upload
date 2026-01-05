@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -123,12 +124,22 @@ namespace PassFort_Upload
             try
             {
                 DropDown_References obj_empname = new DropDown_References();
+
                 DataTable dtaa = new DataTable();
+                DataTable dtaa1 = new DataTable();
+
                 obj_empname.emp_details_list_overall (dtaa);
+                obj_empname.emp_details_list_overall(dtaa1);
+
                 allocation_associate_name.DataSource = dtaa;
+                searchby_associate_name.DataSource = dtaa1;
+
                 allocation_associate_name.DisplayMember = "EmpName";
+                searchby_associate_name.DisplayMember = "EmpName";
+
                 conn.Close();
                 allocation_associate_name.SelectedIndex = -1;
+                searchby_associate_name.SelectedIndex = -1;
             }
             catch (Exception ab)
             {
@@ -151,7 +162,7 @@ namespace PassFort_Upload
                 conn.Open();
                 cmd.Parameters.Clear();
 
-                if (string.IsNullOrEmpty(searchby_inquiry_name.Text) && string.IsNullOrEmpty(searchby_match_name.Text) && string.IsNullOrEmpty(search_entityid.Text))
+                if (string.IsNullOrEmpty(searchby_inquiry_name.Text) && string.IsNullOrEmpty(searchby_match_name.Text) && string.IsNullOrEmpty(search_entityid.Text) && string.IsNullOrEmpty(searchby_associate_name.Text))
                 {
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = "select top 100 Firm,Firm_Name,Submitted,BatchID,Inquiry_PM,InquiryID,Type_P_O,Inquiry_Name,EntityID,Match_Name,Match_Status,Match_Score,TrackingID,ReportingID,Address,City,State,Country,Postal_Code,Age,DOB,Global_Search,Risk_Priority,Event_Codes,Most_Recent_Event_Date,PEP_Type_Level,PEP_Rating,Entity_Addresses,Entity_Date_of_Birth,AI_Alert_Confidence,Inquiry_Notes,Match_Criteria,ID,LastUpdatedBy,LastUpdatedDateTime,Completion_Date,Sanction_Raised_Date,Sanction_Resolved_Date,Business_Confirmed_Client_Inactive,OrgID,Requestor_Email_Address,AssociateName,AllocatedBy,Allocation_Date from dbo.tbl_passfort_data_upload_daily_dotnet_audit_archive with(nolock) where (Event_Codes like '%WLT%' or Inquiry_Notes like '%SNX%' or Inquiry_Notes like '%SAN%') order by ID,BatchID, EntityID";
@@ -183,6 +194,14 @@ namespace PassFort_Upload
                     else
                     {
                         cmd.Parameters.AddWithValue("@match_name", searchby_match_name.Text);
+                    }
+                    if (string.IsNullOrEmpty(searchby_associate_name.Text))
+                    {
+                        cmd.Parameters.AddWithValue("@associate_name",DBNull.Value);
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@associate_name", searchby_associate_name.Text);
                     }
                 }
                 sda.SelectCommand = cmd;
@@ -508,22 +527,25 @@ namespace PassFort_Upload
                 cmd.CommandText = "dbo.usp_passfort_data_audit_allocation_datedotnet";
                 cmd.Parameters.Add("@Message", SqlDbType.NVarChar, 1000);
                 cmd.Parameters["@Message"].Direction = ParameterDirection.Output;
-                cmd.Parameters.AddWithValue("@EntityID", allocation_entityid.Text);
+                if (string.IsNullOrEmpty(entityid.Text))
+                {
+                    cmd.Parameters.AddWithValue("@EntityID", DBNull.Value);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@EntityID", allocation_entityid.Text);
+                }
                 cmd.Parameters.AddWithValue("@AssociateName", allocation_associate_name.Text);
                 cmd.Parameters.AddWithValue("@AllocatedBy",Environment.UserName.ToString());
-                cmd.Parameters.AddWithValue("@From",allocation_from.Value);
-                cmd.Parameters.AddWithValue("@To",allocation_to.Value);
+                cmd.Parameters.AddWithValue("@From",Convert.ToInt32(allocation_from.Value));
+                cmd.Parameters.AddWithValue("@To",Convert.ToInt32(allocation_to.Value));
 
                 //if conditions
-                if (string.IsNullOrEmpty(allocation_entityid.Text))
-                {
-                    MessageBox.Show("Please enter EntityID");
-                }
-                else if (string.IsNullOrEmpty(allocation_associate_name.Text))
+                if (string.IsNullOrEmpty(allocation_associate_name.Text))
                 {
                     MessageBox.Show("Please select Associate Name");
                 }
-                else if (allocation_from.Value < allocation_to.Value)
+                else if (allocation_from.Value > allocation_to.Value)
                 {
                     MessageBox.Show("Page number From value cannot be less the Page number to value");
                 }
@@ -551,6 +573,19 @@ namespace PassFort_Upload
             catch (Exception ab)
             {
                 MessageBox.Show("Error Generated Details :" + ab.ToString());
+            }
+        }
+
+        private void searchby_associate_name_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            datagridview_display_overall();
+        }
+
+        private void searchby_associate_name_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape || e.KeyCode == Keys.Delete || e.KeyCode == Keys.Space || e.KeyCode == Keys.Back)
+            {
+                searchby_associate_name.SelectedIndex = -1;
             }
         }
     }
