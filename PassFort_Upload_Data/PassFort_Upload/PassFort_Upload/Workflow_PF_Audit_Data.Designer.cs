@@ -869,7 +869,7 @@
             // 
             this.allocation_to.Location = new System.Drawing.Point(237, 61);
             this.allocation_to.Maximum = new decimal(new int[] {
-            10000,
+            100000,
             0,
             0,
             0});
@@ -881,7 +881,7 @@
             // 
             this.allocation_from.Location = new System.Drawing.Point(133, 62);
             this.allocation_from.Maximum = new decimal(new int[] {
-            10000,
+            100000,
             0,
             0,
             0});
